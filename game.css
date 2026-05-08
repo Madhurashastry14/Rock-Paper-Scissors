@@ -1,0 +1,61 @@
+body {
+    background: linear-gradient(to right,#1e3eb2,#da1154);
+    height:800px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+#Player_choice button {
+    padding: 20px 45px;
+    margin:5px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 200px;
+    font-size: 20px;
+}
+#Player_choice button:hover {
+    transform: scale(1.05);
+}
+#Player_choice button:active {
+    transform: scale(0.95);
+}
+#reset {
+    padding:20px 45px;
+    border:none;
+    border-radius: 10px;
+    position: absolute;
+    top:570px;
+    left:680px;
+    background: white;
+    font-size: 20px;
+}
+#reset:hover {
+    transform: scale(1.05);
+}
+#reset:active {
+    transform:scale(0.95);
+}
+#Player {
+    font-size: 40px;
+    top:100px;
+    position: absolute;
+    left: 600px;
+}
+#playermove {
+    position: absolute;
+    top:200px;
+    left:600px;
+}
+#mid {
+    font-size: 40px;
+    top:100px;
+    position: absolute;
+    height:250px;
+    border: 2px solid black;
+}
+#computer {
+    font-size: 40px;
+    top:100px;
+    position: absolute;
+    left: 820px;
+}
