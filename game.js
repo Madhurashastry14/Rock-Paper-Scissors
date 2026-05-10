@@ -1,8 +1,5 @@
 let playernow, computernow, computerscore=0, playerscore=0;
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
 
 document.getElementById("playerscore").innerHTML="Score:" + playerscore;
 document.getElementById("computerscore").innerHTML="Score:" + computerscore;
@@ -31,8 +28,6 @@ document.getElementById("Scissors").addEventListener("click" ,(event) => {
 async function computermove() {
     let computerchoice=["Rock","Paper","Scissors"];
     computernow = computerchoice[Math.floor(Math.random() * computerchoice.length)];
-    document.getElementById("computermove").innerHTML="Let me think...";
-    await sleep(1500);
     document.getElementById("computermove").innerHTML=computernow;
     winner();
 }
