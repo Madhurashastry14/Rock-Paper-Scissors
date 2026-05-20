@@ -1,45 +1,43 @@
 let playernow, computernow, computerscore=0, playerscore=0;
-
-
 document.getElementById("playerscore").innerHTML="Score:" + playerscore;
 document.getElementById("computerscore").innerHTML="Score:" + computerscore;
 
 document.getElementById("Rock").addEventListener("click" ,(event) => {
     document.getElementById("result").innerHTML="";
-    playernow="Rock";
+    playernow="👊";
     document.getElementById("playermove").innerHTML=playernow;
     computermove();
 })
 
 document.getElementById("Paper").addEventListener("click" ,(event) => {
     document.getElementById("result").innerHTML="";
-    playernow="Paper";
+    playernow="✋";
     document.getElementById("playermove").innerHTML=playernow;
     computermove();
 })
 
 document.getElementById("Scissors").addEventListener("click" ,(event) => {
     document.getElementById("result").innerHTML="";
-    playernow="Scissors";
+    playernow="✌️";
     document.getElementById("playermove").innerHTML=playernow;
     computermove();
 })
 
 async function computermove() {
-    let computerchoice=["Rock","Paper","Scissors"];
+    let computerchoice=["👊","✋","✌️"];
     computernow = computerchoice[Math.floor(Math.random() * computerchoice.length)];
     document.getElementById("computermove").innerHTML=computernow;
     winner();
 }
 
 function winner() {
-    if(playernow=="Rock") {
-        if(computernow=="Rock") {
+    if(playernow=="👊") {
+        if(computernow=="👊") {
             document.getElementById("result").innerHTML="It's a Draw!";
             document.getElementById("computerscore").innerHTML="Score:" + computerscore;
             document.getElementById("playerscore").innerHTML="Score:" + playerscore;
         }
-        else if(computernow=="Paper") {
+        else if(computernow=="✋") {
             document.getElementById("result").innerHTML="Computer Won!";
             computerscore+=1;
             document.getElementById("computerscore").innerHTML="Score:" + computerscore;
@@ -54,13 +52,13 @@ function winner() {
     }
 
 
-    if(playernow=="Paper") {
-        if(computernow=="Paper") {
+    if(playernow=="✋") {
+        if(computernow=="✋") {
             document.getElementById("result").innerHTML="It's a Draw!";
             document.getElementById("computerscore").innerHTML="Score:" + computerscore;
             document.getElementById("playerscore").innerHTML="Score:" + playerscore;
         }
-        else if(computernow=="Rock") {
+        else if(computernow=="👊") {
             document.getElementById("result").innerHTML="You Won!";
             playerscore+=1;
             document.getElementById("playerscore").innerHTML="Score:" + playerscore;
@@ -75,13 +73,13 @@ function winner() {
     }
 
 
-    if(playernow=="Scissors") {
-        if(computernow=="Scissors") {
+    if(playernow=="✌️") {
+        if(computernow=="✌️") {
             document.getElementById("result").innerHTML="It's a Draw!";
             document.getElementById("playerscore").innerHTML="Score:" + playerscore;
             document.getElementById("computerscore").innerHTML="Score:" + computerscore;
         }
-        else if(computernow=="Paper") {
+        else if(computernow=="✋") {
             document.getElementById("result").innerHTML="You Won!";
             playerscore+=1;
             document.getElementById("playerscore").innerHTML="Score:" + playerscore;
